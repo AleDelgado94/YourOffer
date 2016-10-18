@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html ng-app="youroffer">
+<head lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/creative.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="../js/youroffer.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+    <title>YourOffer</title>
+</head>
+<body con id="background_add" ng-controller="miCtrl">
+
+
+<div class="nav-header">
+    <div id="barra_inicio" class="container" style="border-radius: 6px">
+
+
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <a href="main.html"><img id="logo" style="width: 100px; height: auto" src="../images/logoYO_invertido.png"/></a>
+            </div>
+
+
+            <ul class="nav navbar-nav" style="float: right" >
+                <!--<li class="dropdown">
+                    <a href="#"  data-toggle="dropdown"><label style="font-size: large; color: white">Ofertas</label> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ><a id="btn_addoffer" href="#"><label >Añadir Oferta</label></a></li>
+                        <li class="divider"></li>
+                        <li ><a id="btn_searchoffer" href="#"><label>Buscar Oferta</label></a></li>
+                    </ul>
+                </li>-->
+                <li ><a id="btn_addoffer"><label >Añadir Oferta</label></a></li>
+                <li ><a id="btn_searchoffer"><label>Buscar Oferta</label></a></li>
+                <li><a href="#">Mejores Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Ayuda</a></li>
+
+            </ul>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="container" style="background-color: gainsboro; border-radius: 20px">
+        <div class="row" id="barra_lateral">
+            <div class="col">
+                <div class="container-fluid" >
+                    <div class="row">
+
+                        <div class="col-md-4">
+
+                            <div style=" height: auto; width: 300px; margin-top: 60%">
+                                <img style="border-radius: 30px;width: 100px; height: auto" src="../images/logoYO.png"/>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row" style="height: 20px">
+                                <div  style=" height: auto; width: 300px; margin-top: 80%; margin-left: 30%">
+                                    <label> {{ambito_nombre}} </label>
+                                </div>
+                            </div>
+                            <div class="row" style="height: 20px">
+                                <div  style=" height: auto; width: 300px; margin-top: 80%; margin-left: 30%">
+                                    <label> @Nombre Usuario </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- CONTENEDOR PRINCIPAL -->
+
+                        <div id="cuerpo" class="container" style="overflow-y: scroll;position: absolute; margin-left: 22%; border: solid ; width: 850px; height: 542px">
+                            <ul class="oferta">
+                                <li<h3>Oferta 1</h3></>
+                                <li><h4>Descripcion de la oferta 1</h4></li>
+                            </ul>
+                            <ul class="oferta">
+
+                            </ul>
+                            <ul class="oferta">
+                                bien
+                            </ul>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="row bar_label" >
+                        <div class="col-md-4">
+                            <label>Rol: </label>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Cliente </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Nombre: </label>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Alejandro </label>
+                        </div>
+
+                    </div>
+                    <div class="row " >
+                        <div class="col-md-4">
+                            <label>Apellidos: </label>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Delgado Martel </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Mis Ofertas </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1" style="margin-top: 1%">
+                            <a class="btn btn-default navbar-btn" href="../index.html" id="botones5" style="background-color: red; color: white">Cerrar Cesión</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="../js/youroffer.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="../js/angular.js"></script>
+
+</body>
+</html>

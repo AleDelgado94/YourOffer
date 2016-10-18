@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/creative.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="../js/angular.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+    <title>Registro</title>
+</head>
+<body>
+
+<div id="barra_inicio" class="container" style="border-radius: 10px">
+    <div class="row">
+
+                <div class="col-md-4">
+                    <img style="width: 140px; height: auto" src="../images/logoYO_invertido.png"/>
+                </div>
+                <div class="col-md-4">
+                    <h1 align="center" style="margin-top: 7.5%">Registro</h1>
+                </div>
+    </div>
+</div>
+
+<form action="registro.php" onSubmit="return registro(this)" method="POST">
+    <div class="container" style="background-color: gainsboro; border-radius: 10px 10px 0px 0px">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container-fluid" style="margin-top: 5%; margin-left: 15%; margin-right: 10%; margin-bottom: 5%">
+                    <table>
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Nombre: </label>
+                            </td>
+                            <td> 
+                                <input id="name_registro" name="nombre" required type="text"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Apellidos: </label>
+                            </td>
+                            <td>
+                                <input id="surname_registro" name="apellidos" type="text"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Usuario: </label>
+                            </td>
+                            <td>
+                                <input id="username_registro" name="usuario" required type="text"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label style="font-size: large">E-mail: </label>
+                            </td>
+                            <td>
+                                <input id="email_registro" name="mail" required type="text"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Contraseña: </label>
+                            </td>
+                            <td>
+                                <input id="pass_registro" name="pass" required type="text"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Repetir Contraseña:  </label>
+                            </td>
+                            <td>
+                                <input id="pass2_registro" name="pass2" required type="text"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Tipo: </label>
+                            </td>
+                        <tr>
+                            <td>
+                                <input id="check_cliente_registro" type="checkbox" value="Cliente" name="Cliente"/> <b>Cliente</b>
+                            </td>
+                            <td>
+                                <input id="check_empresario_registro" type="checkbox" value="Empresario" name="Empresario"/> <b>Empresario</b>
+                            </td>
+                        </tr>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <label style="font-size: large"><br>Foto Perfil: <br></label>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="container-fluid" style="margin-top: 5%; margin-left: 10%; margin-right: 10%; margin-bottom: 5%">
+                    <table>
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Nombre Negocio: </label>
+                            </td>
+                            <td>
+                                <input id="name_negocio_registro" type="text"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Foto Negocio: <br></label>
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Lugar: </label>
+                            </td>
+                            <td>
+                                <input id="lugar_negocio_registro" name="lugar" type="text"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Categoría: </label>
+                            </td>
+                            <td>
+                                <select>
+                                    <optgroup label="Locales">
+                                        <option value="bares">Bares</option>
+                                        <option value="restaurantes">Restaurantes</option>
+                                        <option value="pub">Pub</option>
+                                        <option value="disco">Disco</option>
+                                    </optgroup>
+                                    <optgroup label="Deportes">
+                                        <option value="futbol">Fútbol</option>
+                                        <option value="baloncesto">Basket</option>
+                                        <option value="tenis">Tennis</option>
+                                        <option value="otros_deportes">Otros Deportes</option>
+                                    </optgroup>
+                                    <optgroup label="Comidas">
+                                        <option value="comida">Comida</option>
+                                        <option value="bebida">Bebida</option>
+                                    </optgroup>
+                                </select>
+                                <button id="btn_add_registro" style="margin-right: 100px">
+                                    <p style="color: white"><b>Añadir</b></p>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label style="font-size: large">Descripción: </label>
+                            </td>
+                            <td>
+                                <textarea id="description_registro"  name="desc" rows="10" cols="40" placeholder="Escribe una descripción..."></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container" style="background-color: gainsboro; height: 15%; border-radius: 0px 0px 10px 10px">
+        <div class="row" style="align-content: center">
+            <div class="col-md-1" style="margin-top: 1%">
+                <input class="btn btn-default navbar-btn" type="submit"  value="Enviar" id="botones5" style="border: solid; background-color: green; color: white"/>
+            </div>
+            <div class="col-md-1" style="margin-top: 1%">
+                <a class="btn btn-default navbar-btn" id="botones6" style="border: solid; background-color: red; color: white">Borrar</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script src="../js/youroffer.js"></script>
+
+
+
+
+
+</body>
+</html>

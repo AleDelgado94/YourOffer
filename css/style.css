@@ -1,0 +1,67 @@
+.title{
+    float: left;
+    color: white;
+}
+
+#barra_inicio{
+    background-color: #6BCDFD;
+}
+
+.boton_nav{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 20px;
+    color: white;
+    font-style: italic;
+
+}
+
+.boton{
+    border:1px;
+    margin: 5px;
+    border-style: solid;
+    background-color: #ED174B;
+    font-size: 20px;
+    color: white;
+    border-color: black;
+    border-radius: 5px;
+    /*font-family: 'Shadows Into Light', bold;
+*/
+}
+
+#background_add{
+    background-color: white;
+}
+
+#barra_lateral{
+    background-color: beige;
+    width: 300px;
+    height: 550px;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: gray;
+    box-shadow: 2px 1px 1px silver;
+}
+
+.bar_label{
+
+    margin-top: 10%;
+}
+
+#btn_add{
+   border-radius: 5px;
+    background-color: #6BCDFD;
+    height: 27px;
+}
+
+#btn_add_registro{
+    border-radius: 5px;
+    background-color: #6BCDFD;
+    height: 27px;
+}
+
+.oferta{
+    border: solid;
+    width: auto;
+    height: 200px;
+}

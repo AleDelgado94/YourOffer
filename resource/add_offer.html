@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/creative.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+    <title>Añadir Oferta</title>
+</head>
+<body>
+
+<div class="container-fluid" align="center">
+    <h1>Añadir Oferta</h1>
+</div>
+<div class="container-fluid" align="center">
+
+    <div class="row"  style="margin-top: 5%; margin-left: 150px ">
+        <div class="col-md-1">
+            <label style="font-size: large">Titulo: </label>
+        </div>
+        <div class="col-md-2" style="margin-left: 40px">
+            <input  type="text" style="float: left; margin-left: 1px"/>
+        </div>
+    </div>
+
+    <div class="row"  style="margin-top: 1%; margin-left: 150px ">
+        <div class="col-md-2">
+            <label style="font-size: large">Descripción: </label>
+        </div>
+        <div class="col-md-2" style="margin-left: 40px">
+            <textarea id="description_registro"  name="desc" rows="10" cols="40" placeholder="Escribe una descripción..."></textarea>
+        </div>
+    </div>
+
+    <div class="row"  style="margin-top: 0.5%; margin-left: 150px">
+        <div class="col-md-1">
+            <label style="font-size: large">Categoría: </label>
+        </div>
+        <div class="col-md-2" style="margin-left: 40px">
+            <select>
+                <optgroup label="Locales">
+                    <option value="bares">Bares</option>
+                    <option value="restaurantes">Restaurantes</option>
+                    <option value="pub">Pub</option>
+                    <option value="disco">Disco</option>
+                </optgroup>
+                <optgroup label="Deportes">
+                    <option value="futbol">Fútbol</option>
+                    <option value="baloncesto">Basket</option>
+                    <option value="tenis">Tennis</option>
+                    <option value="otros_deportes">Otros Deportes</option>
+                </optgroup>
+                <optgroup label="Comidas">
+                    <option value="comida">Comida</option>
+                    <option value="bebida">Bebida</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <button id="btn_add">
+                <p style="color: white"><b>Añadir</b></p>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="row"  style="margin-top: 1%; margin-left: 150px ">
+        <div class="col-md-1">
+            <label style="font-size: large">Precio: </label>
+        </div>
+        <div class="col-md-3" style="margin-left: 40px">
+            <input id="precio_menor" type="number" style="width: 45px">
+            <label><b> - </b></label>
+            <input id="precio_mayor" type="number" style="width: 45px">
+            <label><b> € </b></label>
+        </div>
+    </div>
+
+    <div class="row"  style="margin-top: 1%; margin-left: 150px ">
+        <div class="col-md-1">
+            <label style="font-size: large">Foto: </label>
+        </div>
+        <div class="col-md-3" style="margin-left: 40px">
+            <form enctype="multipart/form-data" action="uploader.php" method="POST">
+                <input name="uploadedfile" type="file" />
+                <input type="submit" value="Subir archivo" />
+            </form>
+        </div>
+    </div>
+
+    <div class="row"  style="margin-top: 1%; margin-left: 150px ">
+        <div class="col-md-1">
+            <input class="btn btn-default navbar-btn" type="submit" value="Añadir" id="botones5" style="border: solid; background-color: green; color: white"/><a></a>
+        </div>
+        <div class="col-md-2" style="margin-left: 40px">
+            <a class="btn btn-default navbar-btn" id="botones6" style="border: solid; background-color: red; color: white">Borrar</a>
+        </div>
+    </div>
+
+
+
+
+
+    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="../js/youroffer.js" type="text/javascript"></script>
+</body>
+</html>
